@@ -6,7 +6,7 @@ namespace ConfigReload.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController(
+    public class ConfigReloadController(
         IOptions<ConfigReloadOptions> options,
         IOptionsMonitor<ConfigReloadOptions> optionsMonitor,
         IConfiguration configuration
