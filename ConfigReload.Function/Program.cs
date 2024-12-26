@@ -12,7 +12,12 @@ var host = new HostBuilder()
 
         if (hostingContext.HostingEnvironment.IsDevelopment())
         {
-            config.AddJsonFile("local.settings.json", optional: false, reloadOnChange: true);
+            var root = hostingContext.HostingEnvironment.ContentRootPath;
+            
+            // use file in source directory instead of bin since function app monitors published file instead of source file
+            var path = Path.Combine(root, @"..\..\..\", "local.settings.json");
+
+            config.AddJsonFile(path, optional: false, reloadOnChange: true);
         }
 
         config.AddEnvironmentVariables();
