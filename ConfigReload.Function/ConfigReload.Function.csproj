@@ -19,6 +19,12 @@
     <ProjectReference Include="..\ConfigReload.Lib\ConfigReload.Lib.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <None Update="custom.publish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="custom.source.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="host.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
